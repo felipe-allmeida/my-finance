@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.App", "MyFinance.App\MyFinance.App.csproj", "{4DC4BFEC-AE6C-4CA8-83AA-6512B5534AA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.Ledger", "MyFinance.Ledger\MyFinance.Ledger.csproj", "{EB0DEFC5-7BC8-4C96-A932-03166C8E9025}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{981CA831-BC43-49E7-A02A-A4E0D625C383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.Common.Api", "MyFinance.Common.Api\MyFinance.Common.Api.csproj", "{42C40E0C-BB6B-40EF-9056-30E593FD6144}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC4BFEC-AE6C-4CA8-83AA-6512B5534AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC4BFEC-AE6C-4CA8-83AA-6512B5534AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC4BFEC-AE6C-4CA8-83AA-6512B5534AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC4BFEC-AE6C-4CA8-83AA-6512B5534AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0DEFC5-7BC8-4C96-A932-03166C8E9025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0DEFC5-7BC8-4C96-A932-03166C8E9025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0DEFC5-7BC8-4C96-A932-03166C8E9025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0DEFC5-7BC8-4C96-A932-03166C8E9025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C40E0C-BB6B-40EF-9056-30E593FD6144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C40E0C-BB6B-40EF-9056-30E593FD6144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C40E0C-BB6B-40EF-9056-30E593FD6144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C40E0C-BB6B-40EF-9056-30E593FD6144}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42C40E0C-BB6B-40EF-9056-30E593FD6144} = {981CA831-BC43-49E7-A02A-A4E0D625C383}
+	EndGlobalSection
+EndGlobal

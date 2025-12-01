@@ -1,0 +1,7 @@
+<Project>
+    <PropertyGroup>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <!-- CS8524: Switch expression not exhaustive with unnamed enum values -->
+        <WarningsNotAsErrors>CS8524</WarningsNotAsErrors>
+    </PropertyGroup>
+</Project>
