@@ -121,8 +121,6 @@ public class ApiIdSourceGenerator : IIncrementalGenerator
               using System;
               using System.Text.Json;
               using System.Text.Json.Serialization;
-              using Microsoft.OpenApi.Any;
-              using Microsoft.OpenApi.Models;
 
               namespace {{namespaceName}};
 
@@ -177,13 +175,6 @@ public class ApiIdSourceGenerator : IIncrementalGenerator
                   {
                       return new {{className}}(d);
                   }
-
-                  public static OpenApiSchema GetOpenApiSchema() => new()
-                  {
-                      Type = "string",
-                      Pattern = $"{Prefix}.+",
-                      Example = new OpenApiString($"{Prefix}3b1333d87d9d4fd6ad83ba7f6b0e951a")
-                  };
 
                   {{alternateToStringMethod}}
 

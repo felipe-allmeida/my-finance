@@ -40,6 +40,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.Common.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.CodeAnalysis", "src\Common\MyFinance.CodeAnalysis\MyFinance.CodeAnalysis.csproj", "{AD41694F-B347-499A-9D2E-FE39FE324B44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFinance.Common.Infrastructure", "src\Common\MyFinance.Common.Infrastructure\MyFinance.Common.Infrastructure.csproj", "{9066550C-A105-4E4F-8044-7629C553E82F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +86,14 @@ Global
 		{AD41694F-B347-499A-9D2E-FE39FE324B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD41694F-B347-499A-9D2E-FE39FE324B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD41694F-B347-499A-9D2E-FE39FE324B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9066550C-A105-4E4F-8044-7629C553E82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9066550C-A105-4E4F-8044-7629C553E82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9066550C-A105-4E4F-8044-7629C553E82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9066550C-A105-4E4F-8044-7629C553E82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +112,7 @@ Global
 		{CE63E25E-CA96-92A2-69B3-E5217C2098D8} = {981CA831-BC43-49E7-A02A-A4E0D625C383}
 		{4586E9A0-D586-4B1E-AABA-284F6A6CFEA1} = {981CA831-BC43-49E7-A02A-A4E0D625C383}
 		{AD41694F-B347-499A-9D2E-FE39FE324B44} = {981CA831-BC43-49E7-A02A-A4E0D625C383}
+		{9066550C-A105-4E4F-8044-7629C553E82F} = {981CA831-BC43-49E7-A02A-A4E0D625C383}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B308D70C-D10D-473A-9147-A79E1E0A12A9}

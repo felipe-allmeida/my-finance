@@ -5,7 +5,7 @@ namespace MyFinance.Ledger.Domain.Transactions;
 public class Transaction : Entity
 {
     public Guid Id { get; private set; }
-    public DateTime Date { get; private set; }
+    public DateTimeOffset Date { get; private set; }
     public decimal Amount { get; private set; }
     public TransactionType Type { get; private set; }
 

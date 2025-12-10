@@ -4,5 +4,5 @@ namespace MyFinance.Common.Application;
 
 public interface IEndpoint
 {
-    static abstract void Map(IEndpointRouteBuilder builder);
+    void Map(IEndpointRouteBuilder builder);
 }

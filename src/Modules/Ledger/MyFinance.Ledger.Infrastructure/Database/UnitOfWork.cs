@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using MyFinance.Common.Domain;
+
+namespace MyFinance.Ledger.Infrastructure.Database
+{
+    internal class UnitOfWork(LedgerContext context) : IUnitOfWork
+    {
+        public IQueryable<T> Set<T>() where T : Entity
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<T> ReadSet<T>() where T : Entity
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<T> AddAsync<T>(T entity, CancellationToken ct = default) where T : Entity
+        {
+            var a = await context.Set<T>().AddAsync(entity, ct);
+            return a.Entity;
+        }
+
+        public Task AddRangeAsync<T>(IEnumerable<T> entities, CancellationToken ct = default) where T : Entity
+        {
+            return context.Set<T>().AddRangeAsync(entities, ct);
+        }
+
+        public T Update<T>(T entity) where T : Entity
+        {
+            return context.Set<T>().Update(entity).Entity;
+        }
+
+        public T Delete<T>(T entity) where T : Entity
+        {
+            entity.Delete();
+            return context.Set<T>().Update(entity).Entity;
+        }
+
+        public async Task SaveChangesAsync(CancellationToken ct = default)
+        {
+            await context.SaveChangesAsync(ct);
+        }
+    }
+}
