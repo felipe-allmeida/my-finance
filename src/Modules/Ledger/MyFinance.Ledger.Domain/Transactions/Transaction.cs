@@ -27,7 +27,7 @@ public class Transaction : Entity
         bool isRecurring = false,
         string? recurrenceRule = null)
     {
-        if (amount <= 0) throw new ArgumentOutOfRangeException(nameof(amount));
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(amount);
 
         Id = id;
         Date = date;
@@ -45,7 +45,7 @@ public class Transaction : Entity
         Guid categoryId,
         string? description)
     {
-        if (amount <= 0) throw new ArgumentOutOfRangeException(nameof(amount));
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(amount);
 
         Date = date;
         Amount = amount;

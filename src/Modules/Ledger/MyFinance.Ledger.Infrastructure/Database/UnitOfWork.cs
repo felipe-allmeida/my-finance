@@ -1,6 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 using MyFinance.Common.Domain;
 
 namespace MyFinance.Ledger.Infrastructure.Database
@@ -9,12 +7,12 @@ namespace MyFinance.Ledger.Infrastructure.Database
     {
         public IQueryable<T> Set<T>() where T : Entity
         {
-            throw new NotImplementedException();
+            return context.Set<T>().AsQueryable();
         }
 
         public IQueryable<T> ReadSet<T>() where T : Entity
         {
-            throw new NotImplementedException();
+            return context.Set<T>().AsNoTracking().AsQueryable();
         }
 
         public async Task<T> AddAsync<T>(T entity, CancellationToken ct = default) where T : Entity
