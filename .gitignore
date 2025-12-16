@@ -9,6 +9,9 @@
 .claude/settings.local.json
 CLAUDE.local.md
 
+# Docker volumes
+.containers/
+
 # User-specific files
 *.suo
 *.user
