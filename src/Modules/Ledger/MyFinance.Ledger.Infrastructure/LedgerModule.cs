@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using MyFinance.Common.Application.Messaging;
 using MyFinance.Common.Domain;
+using MyFinance.Common.Infrastructure.Extensions;
 using MyFinance.Ledger.Infrastructure.Database;
 
 namespace MyFinance.Ledger.Infrastructure;
@@ -18,6 +19,8 @@ public static class LedgerModule
     public static IServiceCollection AddLedgerModule(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddInfrastructure(configuration);
+
+        services.AddEndpoints(MyFinance.Ledger.Application.AssemblyReference.Assembly);
 
         // Register Ledger module services here
         return services;

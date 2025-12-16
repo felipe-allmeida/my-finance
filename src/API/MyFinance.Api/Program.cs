@@ -1,7 +1,6 @@
 using System.Reflection;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using MyFinance.Api.Extensions;
 using MyFinance.Common.Infrastructure;
 using MyFinance.Common.Infrastructure.Extensions;
 using MyFinance.Ledger.Infrastructure;
@@ -12,7 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddProblemDetails();
 
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerDocumentation();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.OpenApiInfo
+    {
+        Title = "MyFinance API",
+        Version = "v1",
+        Description = "API for MyFinance application"
+    });
+});
 
 Assembly[] moduleApplicationAssemblies = [MyFinance.Ledger.Application.AssemblyReference.Assembly];
 
@@ -31,9 +38,8 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    // TODO:
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 
     //app.ApplyMigrations();
 }
