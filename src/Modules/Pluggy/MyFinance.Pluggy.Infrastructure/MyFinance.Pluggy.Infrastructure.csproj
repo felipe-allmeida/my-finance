@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyFinance.Pluggy.Domain\MyFinance.Pluggy.Domain.csproj" />
+    <ProjectReference Include="..\MyFinance.Pluggy.Application\MyFinance.Pluggy.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\MyFinance.Common.Infrastructure\MyFinance.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Ledger\MyFinance.Ledger.Domain\MyFinance.Ledger.Domain.csproj" />
+    <ProjectReference Include="..\..\Ledger\MyFinance.Ledger.Infrastructure\MyFinance.Ledger.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Pluggy.SDK" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

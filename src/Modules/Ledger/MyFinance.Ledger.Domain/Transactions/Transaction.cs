@@ -15,6 +15,10 @@ public class Transaction : Entity
     public bool IsRecurring { get; private set; }
     public string? RecurrenceRule { get; private set; }
 
+    public TransactionSource Source { get; private set; }
+    public string? ExternalId { get; private set; }
+    public string? ExternalSource { get; private set; }
+
     protected Transaction() { }
 
     public Transaction(
@@ -25,7 +29,10 @@ public class Transaction : Entity
         Guid categoryId,
         string? description = null,
         bool isRecurring = false,
-        string? recurrenceRule = null)
+        string? recurrenceRule = null,
+        TransactionSource source = TransactionSource.Manual,
+        string? externalId = null,
+        string? externalSource = null)
     {
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(amount);
 
@@ -37,6 +44,9 @@ public class Transaction : Entity
         Description = description;
         IsRecurring = isRecurring;
         RecurrenceRule = recurrenceRule;
+        Source = source;
+        ExternalId = externalId;
+        ExternalSource = externalSource;
     }
 
     public void Update(
@@ -52,4 +62,11 @@ public class Transaction : Entity
         CategoryId = categoryId;
         Description = description;
     }
+}
+
+public enum TransactionSource
+{
+    Manual,
+    Pluggy,
+    Import
 }
